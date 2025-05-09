@@ -7,11 +7,13 @@ export default function HomePage() {
         Hi, I'm Jack (he/him) 👋
       </h1>
       <p className="mb-4">
-        {`Welcome to my world! 
-        Currently I'm pursuing my Master of Computer Science at the University of St Andrews.
-        My MBTI is ENFP. I'm a code enthusiast and design advocate, 
-        always finding unrealistic and strange ideas that could be developed. 
-        I love to share my thoughts and ideas with others.`}
+        {`Welcome to my personal blog!
+
+        I'm currently a Master's student in Computer Science at the University of St Andrews.
+
+        With a backgound in finance and a passion for technology, I enjoy building creative digital solutions that bridge the gap between design and code.
+        
+        On this blog, I share insights from my projects, thoughts on tech, and occasional reflections on life. I hope you find something that resonates with you!`}
       </p>
       <div className="my-8">
         <BlogPosts />
