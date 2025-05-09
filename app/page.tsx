@@ -1,17 +1,17 @@
 import { BlogPosts } from 'app/components/posts'
 
-export default function Page() {
+export default function HomePage() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        Hi, I'm Jack (he/him) 👋
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`Welcome to my world! 
+        Currently I'm pursuing my Master of Computer Science at the University of St Andrews.
+        My MBTI is ENFP. I'm a code enthusiast and design advocate, 
+        always finding unrealistic and strange ideas that could be developed. 
+        I love to share my thoughts and ideas with others.`}
       </p>
       <div className="my-8">
         <BlogPosts />
