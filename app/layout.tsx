@@ -52,6 +52,11 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
