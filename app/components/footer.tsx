@@ -64,6 +64,21 @@ export default function Footer() {
           </a>
         </li>
       </ul>
+      <div className="mt-8">
+        <h3 className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">Blogroll</h3>
+        <a
+          className="flex items-center text-sm text-neutral-600 dark:text-neutral-300 transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://yileics.github.io/portfolio/"
+        >
+          <ArrowIcon />
+          <div className="ml-2">
+            <p className="font-medium">Yilei's Portfolio</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">Words freer than the wind</p>
+          </div>
+        </a>
+      </div>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
         © {new Date().getFullYear()} JacckNew. <a href="/LICENSE">MIT License</a>.
         <br />
