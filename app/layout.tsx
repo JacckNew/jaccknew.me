@@ -11,8 +11,26 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: "Yukai's Portfolio",
+    template: "%s | Yukai's Portfolio",
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'manifest',
+        url: '/manifest.json',
+      },
+      {
+        rel: 'icon',
+        url: '/favicon-192x192.png',
+      },
+      {
+        rel: 'icon',
+        url: '/favicon-512x512.png',
+      },
+    ],
   },
   description: 'This is my portfolio.',
   openGraph: {
@@ -52,11 +70,6 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/favicon.png" />
-      </head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
