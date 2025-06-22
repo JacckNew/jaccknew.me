@@ -1,3 +1,4 @@
+// Footer component.
 function ArrowIcon() {
   return (
     <svg

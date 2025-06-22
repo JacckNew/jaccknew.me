@@ -1,3 +1,4 @@
+// Custom MDX components for Next.js like links, images, code blocks, and tables.
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'

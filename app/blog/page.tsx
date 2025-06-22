@@ -1,3 +1,4 @@
+// Main blog page.
 import { BlogPosts } from 'app/components/posts'
 
 export const metadata = {

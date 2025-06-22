@@ -1,3 +1,4 @@
+// List of blog posts with links and dates.
 import Link from 'next/link'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 

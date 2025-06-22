@@ -1,3 +1,4 @@
+// Utility functions for accessing and formatting blog post data.
 import fs from 'fs'
 import path from 'path'
 

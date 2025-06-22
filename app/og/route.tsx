@@ -1,3 +1,4 @@
+// Generate Open Graph image for sharing on social media
 import { ImageResponse } from 'next/og'
 
 export function GET(request: Request) {

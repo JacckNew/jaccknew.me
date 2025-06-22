@@ -1,3 +1,4 @@
+// Home page.
 import { BlogPosts } from 'app/components/posts'
 
 export default function HomePage() {

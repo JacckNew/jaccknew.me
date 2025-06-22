@@ -1,3 +1,4 @@
+// Generate RSS feed for the blog posts
 import { baseUrl } from 'app/sitemap'
 import { getBlogPosts } from 'app/blog/utils'
 
