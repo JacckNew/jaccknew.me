@@ -96,20 +96,20 @@ export default function Blog({ params }) {
       </article>
       <div className="mt-12" id='giscus'/>
       <script src="https://giscus.app/client.js"
-      data-repo="JacckNew/portfolio-starter-kit"
-      data-repo-id="R_kgDOOnCUog"
-      data-category="Announcements"
-      data-category-id="DIC_kwDOOnCUos4Cr28z"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="preferred_color_scheme"
-      data-lang="en"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async
+        data-repo="JacckNew/portfolio-starter-kit"
+        data-repo-id="R_kgDOOnCUog"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOnCUos4Cr28z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
       ></script>
     </section>
   )
