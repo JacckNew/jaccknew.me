@@ -1,6 +1,5 @@
 // Component of the blog post page in a Next.js application.
-"use client";
-import {use, useEffect} from 'react';
+import Comments from './comments'
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
@@ -61,28 +60,6 @@ export default function Blog({ params }) {
     notFound()
   }
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'JacckNew/portfolio-starter-kit');
-    script.setAttribute('data-repo-id', 'R_kgDOOnCUog');
-    script.setAttribute('data-category', 'Announcements');
-    script.setAttribute('data-category-id', 'DIC_kwDOOnCUos4Cr28z');
-    script.setAttribute('data-mapping', 'pathname');
-    script.setAttribute('data-strict', '0');
-    script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'top');
-    script.setAttribute('data-theme', 'preferred_color_scheme');
-    script.setAttribute('data-lang', 'en');
-    script.setAttribute('data-loading', 'lazy');
-    script.setAttribute('crossorigin', 'anonymous');
-    script.async = true;
-
-    const giscusContainer = document.getElementById('giscus');
-    if (giscusContainer)  giscusContainer.appendChild(script);
-  }, []);
-
   return (
     <section>
       <script
@@ -118,7 +95,7 @@ export default function Blog({ params }) {
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
-      <div className="mt-12" id='giscus'/>
+      <Comments />
     </section>
   )
 }
