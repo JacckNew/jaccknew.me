@@ -100,6 +100,6 @@ let components = {
   Table,
 }
 
-export default function CustomMDX({ children}) {
-  return <MDXProvider>{children}</MDXProvider>;
+export default function CustomMDX({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }

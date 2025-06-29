@@ -93,7 +93,7 @@ export default function Blog({ params }) {
         </p>
       </div>
       <article className="prose">
-        <CustomMDX source={post.content} />
+        <CustomMDX>{post.content}</CustomMDX>
       </article>
       <Comments />
     </section>
