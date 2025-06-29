@@ -1,7 +1,7 @@
 // Component of the blog post page in a Next.js application.
 import Comments from './comments'
 import { notFound } from 'next/navigation'
-import { CustomMDX } from 'app/components/mdx'
+import CustomMDX from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
 
