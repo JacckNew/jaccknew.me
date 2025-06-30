@@ -10,6 +10,14 @@ type Metadata = {
   image?: string
 }
 
+// 计算预计阅读时间（假设平均阅读速度为每分钟200个单词）
+export function calculateReadingTime(content: string): number {
+  const wordsPerMinute = 200
+  const words = content.split(/\s+/).length
+  const minutes = Math.ceil(words / wordsPerMinute)
+  return minutes
+}
+
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
   let match = frontmatterRegex.exec(fileContent)

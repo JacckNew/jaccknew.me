@@ -2,8 +2,9 @@
 import Comments from './comments'
 import { notFound } from 'next/navigation'
 import CustomMDX from 'app/components/mdx'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
+import { formatDate, getBlogPosts, calculateReadingTime } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
+import ScrollToTop from 'app/components/scroll-to-top'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -60,6 +61,8 @@ export default function Blog({ params }) {
     notFound()
   }
 
+  const readingTime = calculateReadingTime(post.content)
+
   return (
     <section>
       <script
@@ -88,14 +91,21 @@ export default function Blog({ params }) {
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
+        <div className="flex items-center space-x-4">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            {formatDate(post.metadata.publishedAt)}
+          </p>
+          <span className="text-neutral-400 dark:text-neutral-500">•</span>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            预计阅读时间 {readingTime} 分钟
+          </p>
+        </div>
       </div>
       <article className="prose dark:prose-invert">
         <CustomMDX source={post.content} />
       </article>
       <Comments />
+      <ScrollToTop />
     </section>
   )
 }
