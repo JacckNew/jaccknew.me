@@ -1,29 +1,13 @@
-"use client";
-
 // Guestbook page component
+import GiscusGuestbook from './giscus-guestbook'
+import { Metadata } from 'next'
 
-import { useState, useEffect } from "react";
+export const metadata: Metadata = {
+  title: 'Guestbook',
+  description: 'Leave a message! Whether you\'re a friend, classmate, or curious visitor — I\'d love to hear from you.',
+}
 
 export default function GuestbookPage() {
-  const [entries, setEntries] = useState<string[]>([]);
-  const [input, setInput] = useState("");
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "JacckNew/jaccknew.me");
-    script.setAttribute("data-repo-id", "R_kgDOOnCUog");
-    script.setAttribute("data-category", "Guestbook");
-    script.setAttribute("data-category-id", "DIC_kwDOOnCUos4Cr28z");
-    script.setAttribute("data-mapping", "specific");
-    script.setAttribute("data-term", "guestbook");
-    script.setAttribute("data-theme", "preferred_color_scheme");
-    script.setAttribute("crossorigin", "anonymous");
-    script.async = true;
-    const container = document.getElementById("giscus");
-    if (container) container.appendChild(script);
-  }, []);
-
   return (
     <section>
       <h1 className="text-2xl font-bold mb-4">Guestbook</h1>
@@ -31,7 +15,7 @@ export default function GuestbookPage() {
         Leave a message! Whether you're a friend, classmate, or curious visitor — I'd love to hear from you.
       </p>
 
-      <div id="giscus" className="mt-12" />
+      <GiscusGuestbook />
     </section>
   );
 }
