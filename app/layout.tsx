@@ -12,8 +12,8 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Yukai's Portfolio",
-    template: "%s | Yukai's Portfolio",
+    default: "JackNew's Blog",
+    template: "%s | JackNew's Blog",
   },
   icons: {
     icon: '/favicon.ico',
@@ -33,14 +33,28 @@ export const metadata: Metadata = {
       },
     ],
   },
-  description: 'This is my portfolio.',
+  description: 'Personal blog sharing thoughts, ideas, and reflections on technology, life, and growth.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: "JackNew's Blog",
+    description: 'Personal blog sharing thoughts, ideas, and reflections on technology, life, and growth.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: "JackNew's Blog",
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${baseUrl}/og?title=${encodeURIComponent("JackNew's Blog")}`,
+        width: 1200,
+        height: 630,
+        alt: "JackNew's Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "JackNew's Blog",
+    description: 'Personal blog sharing thoughts, ideas, and reflections on technology, life, and growth.',
+    images: [`${baseUrl}/og?title=${encodeURIComponent("JackNew's Blog")}`],
   },
   robots: {
     index: true,
