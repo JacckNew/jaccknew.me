@@ -6,10 +6,10 @@ export default function Comments() {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'JacckNew/portfolio-starter-kit');
+    script.setAttribute('data-repo', 'JacckNew/jaccknew.me');
     script.setAttribute('data-repo-id', 'R_kgDOOnCUog');
-    script.setAttribute('data-category', 'Announcements');
-    script.setAttribute('data-category-id', 'DIC_kwDOOnCUos4Cr28z');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOOnCUos4CjVhM');
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
@@ -23,7 +23,15 @@ export default function Comments() {
 
     const giscusContainer = document.getElementById('giscus');
     if (giscusContainer) giscusContainer.appendChild(script);
+
+    // 清理函数，防止重复加载
+    return () => {
+      const existingScript = document.querySelector('script[src="https://giscus.app/client.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
   }, []);
   
-  return <div id="giscus" />;
+  return <div id="giscus" className="mt-8" />;
 }
