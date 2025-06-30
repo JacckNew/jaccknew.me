@@ -46,7 +46,9 @@ function CustomLink(props) {
 }
 
 function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+  // 对于 MDX 中的图片，我们使用 img 标签而不是 Next.js Image 组件
+  // 因为 MDX 中的图片语法不会提供 width 和 height 属性
+  return <img alt={props.alt} className="rounded-lg" {...props} />
 }
 
 function Code({ children, ...props }) {
@@ -95,6 +97,7 @@ let components = {
   h5: createHeading(5),
   h6: createHeading(6),
   Image: RoundedImage,
+  img: RoundedImage,
   a: CustomLink,
   code: Code,
   Table,
