@@ -1,4 +1,9 @@
 // Notes page for displaying study notes and reflections.
+export const metadata = {
+  title: 'Notes',
+  description: 'Study notes, academic papers, and reflections on coursework.',
+}
+
 export default function NotesPage() {
   return (
     <section>

@@ -1,5 +1,12 @@
 // Guestbook page component
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Guestbook',
+  description: 'Leave a message! Whether you\'re a friend, classmate, or curious visitor.',
+}
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -11,7 +18,7 @@ export default function GuestbookPage() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "JacckNew/portfolio-starter-kit");
+    script.setAttribute("data-repo", "JacckNew/jaccknew.me");
     script.setAttribute("data-repo-id", "R_kgDOOnCUog");
     script.setAttribute("data-category", "Guestbook");
     script.setAttribute("data-category-id", "DIC_kwDOOnCUos4Cr28z");

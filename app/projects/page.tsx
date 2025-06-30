@@ -1,4 +1,9 @@
 // Projects page for displaying personal projects
+export const metadata = {
+  title: 'Projects',
+  description: 'My personal projects and work.',
+}
+
 export default function ProjectsPage() {
   return (
     <section>
