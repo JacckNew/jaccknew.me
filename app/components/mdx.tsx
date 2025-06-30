@@ -1,9 +1,9 @@
 // Custom MDX components for Next.js like links, images, code blocks, and tables.
 import Link from 'next/link'
 import Image from 'next/image'
-import { MDXProvider } from '@mdx-js/react'
 import { highlight } from 'sugar-high'
 import React from 'react'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -100,6 +100,11 @@ let components = {
   Table,
 }
 
-export default function CustomMDX({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default function CustomMDX(props) {
+  return (
+    <MDXRemote
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
+  )
 }

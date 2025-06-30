@@ -1,4 +1,4 @@
-// Component of the blog post page in a Next.js application.
+// Component of the blog post page.
 import Comments from './comments'
 import { notFound } from 'next/navigation'
 import CustomMDX from 'app/components/mdx'
@@ -92,8 +92,8 @@ export default function Blog({ params }) {
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
-      <article className="prose">
-        <CustomMDX>{post.content}</CustomMDX>
+      <article className="prose dark:prose-invert">
+        <CustomMDX source={post.content} />
       </article>
       <Comments />
     </section>

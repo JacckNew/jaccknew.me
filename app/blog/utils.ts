@@ -1,6 +1,7 @@
 // Utility functions for accessing and formatting blog post data.
 import fs from 'fs'
 import path from 'path'
+import { cache } from 'react'
 
 type Metadata = {
   title: string
@@ -12,7 +13,12 @@ type Metadata = {
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
   let match = frontmatterRegex.exec(fileContent)
-  let frontMatterBlock = match![1]
+  
+  if (!match) {
+    throw new Error('Invalid frontmatter format')
+  }
+  
+  let frontMatterBlock = match[1]
   let content = fileContent.replace(frontmatterRegex, '').trim()
   let frontMatterLines = frontMatterBlock.trim().split('\n')
   let metadata: Partial<Metadata> = {}
@@ -50,9 +56,9 @@ function getMDXData(dir) {
   })
 }
 
-export function getBlogPosts() {
+export const getBlogPosts = cache(() => {
   return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts'))
-}
+})
 
 export function formatDate(date: string, includeRelative = false) {
   let currentDate = new Date()
