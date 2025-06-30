@@ -1,13 +1,6 @@
-// Guestbook page component
-
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Guestbook',
-  description: 'Leave a message! Whether you\'re a friend, classmate, or curious visitor.',
-}
-
 "use client";
+
+// Guestbook page component
 
 import { useState, useEffect } from "react";
 
