@@ -9,8 +9,7 @@ type Metadata = {
   summary: string
   image?: string
 }
-
-// 计算预计阅读时间（假设平均阅读速度为每分钟200个单词）
+// Compute estimated reading time (assuming an average reading speed of 200 words per minute)
 export function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200
   const words = content.split(/\s+/).length

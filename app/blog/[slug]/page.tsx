@@ -97,7 +97,7 @@ export default function Blog({ params }) {
           </p>
           <span className="text-neutral-400 dark:text-neutral-500">•</span>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            预计阅读时间 {readingTime} 分钟
+            estimated time: {readingTime} minute{readingTime > 1 ? 's' : ''}
           </p>
         </div>
       </div>
