@@ -15,24 +15,37 @@ export const metadata: Metadata = {
     default: "JackNew's Blog",
     template: "%s | JackNew's Blog",
   },
+  applicationName: "JackNew's Blog",
+  authors: [{ name: 'Jack', url: baseUrl }],
+  creator: 'Jack',
+  publisher: 'Jack',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  keywords: ['blog', 'personal', 'technology', 'thoughts', 'ideas', 'jack', 'jacknew'],
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '16x16 32x32', type: 'image/x-icon' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
     other: [
       {
-        rel: 'manifest',
-        url: '/manifest.json',
-      },
-      {
-        rel: 'icon',
-        url: '/favicon-192x192.png',
-      },
-      {
-        rel: 'icon',
-        url: '/favicon-512x512.png',
+        rel: 'mask-icon',
+        url: '/favicon.svg',
+        color: '#3b82f6',
       },
     ],
   },
+  manifest: '/manifest.json',
   description: 'Personal blog sharing thoughts, ideas, and reflections on technology, life, and growth.',
   openGraph: {
     title: "JackNew's Blog",
@@ -55,6 +68,12 @@ export const metadata: Metadata = {
     title: "JackNew's Blog",
     description: 'Personal blog sharing thoughts, ideas, and reflections on technology, life, and growth.',
     images: [`${baseUrl}/og?title=${encodeURIComponent("JackNew's Blog")}`],
+    creator: '@jacknew',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: "JackNew's Blog",
   },
   robots: {
     index: true,
@@ -85,6 +104,16 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      <head>
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="JackNew's Blog" />
+        <meta name="msapplication-TileColor" content="#3b82f6" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+      </head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
