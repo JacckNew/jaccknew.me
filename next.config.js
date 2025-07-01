@@ -3,6 +3,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
     remotePatterns: [
       {
@@ -17,6 +18,11 @@ const nextConfig = {
   },
 }
 
-const withMDX = require('@next/mdx')()
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    providerImportSource: '@mdx-js/react',
+  },
+})
 
 module.exports = withMDX(nextConfig)
