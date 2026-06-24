@@ -1,2 +1,4 @@
+allowBuilds:
+  '@vercel/speed-insights': true
 ignoredBuiltDependencies:
   - '@vercel/speed-insights'
