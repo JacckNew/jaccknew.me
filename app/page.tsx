@@ -1,5 +1,5 @@
 // Home page.
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from '@/components/posts'
 
 export default function HomePage() {
   return (

@@ -1,10 +1,10 @@
 // Component of the blog post page.
 import Comments from './comments'
 import { notFound } from 'next/navigation'
-import CustomMDX from 'app/components/mdx'
-import { formatDate, getBlogPosts, calculateReadingTime } from 'app/blog/utils'
-import { baseUrl } from 'app/sitemap'
-import ScrollToTop from 'app/components/scroll-to-top'
+import CustomMDX from '@/components/mdx'
+import { formatDate, getBlogPosts, calculateReadingTime } from '@/blog/utils'
+import { baseUrl } from '@/sitemap'
+import ScrollToTop from '@/components/scroll-to-top'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()

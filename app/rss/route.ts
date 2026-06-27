@@ -1,6 +1,6 @@
 // Generate RSS feed for the blog posts
-import { baseUrl } from 'app/sitemap'
-import { getBlogPosts } from 'app/blog/utils'
+import { baseUrl } from '@/sitemap'
+import { getBlogPosts } from '@/blog/utils'
 
 export async function GET() {
   let allBlogs = await getBlogPosts()
