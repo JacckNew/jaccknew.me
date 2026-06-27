@@ -10,7 +10,7 @@ export default function RainbowHealthPage() {
       <iframe
         src="/projects/rainbow-health/rainbowHealth_patient.html"
         className="w-full border rounded-lg"
-        style={{minHeight: 'calc(100vh - 200px' }}
+        style={{ minHeight: 'calc(100vh - 200px)', height: 'calc(100vh - 200px)' }}
         title="Rainbow Health Project"
         />
     </div>
