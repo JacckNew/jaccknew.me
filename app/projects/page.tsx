@@ -11,6 +11,16 @@ export default function ProjectsPage() {
 
       <div className="space-y-6">
         <div>
+          <h2 className="text-xl font-semibold">🌈 Rainbow Health</h2>
+          <p className="text-neutral-700 dark:text-neutral-300">
+            A patient-side health platform...
+          </p>
+          <a href="/projects/rainbow-health" className="text-blue-500">
+            View Project →
+          </a>
+        </div>
+        
+        <div>
           <h2 className="text-xl font-semibold">🎵 和弦识别系统</h2>
           <p className="text-neutral-700 dark:text-neutral-300">
             利用音频特征提取与机器学习方法，开发的音乐和弦自动识别系统，支持真实音频分析与和弦可视化。
